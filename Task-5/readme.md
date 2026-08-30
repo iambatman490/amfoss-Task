@@ -13,9 +13,5 @@ A simple terminal-based system monitoring tool built in Python. Inspired by util
    - Uses non-blocking keyboard input.
    - Users can scroll up and down through the process list using arrow keys.
    - Allows sending a termination signal (`SIGTERM`) to kill a selected process.
-### 1. Virtual Environment Setup
 # Clone the repository
 git clone https://github.com/iambatman490/amfoss-Task
-cd amfoss-Task
-# Install dependencies
-pip install -r requirements.txt

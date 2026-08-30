@@ -17,3 +17,4 @@
     Interactive Charts: Integrated Chart.js to draw price trends. When a user clicks a coin or changes the time range, the app fetches historical price data and redraws the graph.
     Watchlist (Favorites): Allowed users to star/favorite coins. Saved these choices in the browser's localStorage so the favorites stay saved even after refreshing the page.
     Theme Switcher: Added a click event on the theme button to toggle data-theme between "dark" and "light".
+4.link='https://iambatman490.github.io/amfoss-Task/Task-4/'

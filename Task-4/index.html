@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraCrypto | Real-Time Tracker & Insights</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-icon">⚡</span>
+      <h2>Aura<span>Crypto</span></h2>
+    </div>
+    
+    <div class="nav-controls">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search coin (e.g., BTC, Solana)..." autocomplete="off">
+      </div>
+      <button id="themeToggle" class="btn-theme" title="Toggle Theme">☀️ / 🌙</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Chart / Detail Section -->
+    <section class="chart-section" id="chartCard">
+      <div class="chart-header">
+        <div class="coin-active-info">
+          <img id="activeCoinIcon" src="" alt="" class="coin-lg-icon">
+          <div>
+            <h2 id="activeCoinName">Bitcoin (BTC)</h2>
+            <div class="price-badge">
+              <span id="activeCoinPrice">$0.00</span>
+              <span id="activeCoinChange" class="change-tag">+0.00%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeframe-buttons">
+          <button class="time-btn" data-days="1">24H</button>
+          <button class="time-btn active" data-days="7">7D</button>
+          <button class="time-btn" data-days="30">1M</button>
+          <button class="time-btn" data-days="365">1Y</button>
+        </div>
+      </div>
+      
+      <div class="canvas-wrapper">
+        <canvas id="coinChart"></canvas>
+      </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <div class="view-tabs">
+      <button class="tab-btn active" id="tabAll">🔥 All Markets</button>
+      <button class="tab-btn" id="tabWatchlist">⭐ Watchlist (<span id="watchlistCount">0</span>)</button>
+    </div>
+
+    <!-- Crypto Table -->
+    <div class="table-container">
+      <table class="crypto-table">
+        <thead>
+          <tr>
+            <th>Fav</th>
+            <th>#</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>24h Change</th>
+            <th>Market Cap</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="cryptoTableBody">
+          <!-- Dynamically populated via JS -->
+        </tbody>
+      </table>
+      <div id="loader" class="loader">Loading live crypto data...</div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
